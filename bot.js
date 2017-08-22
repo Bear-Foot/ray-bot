@@ -3,6 +3,8 @@ const client = new Discord.Client()
 const fortniteGuildId = "348401698890317834"
 const _ = require('lodash')
 
+const net = require('net')
+
 const prefix = '!'
 
 const groupsId = {
@@ -66,3 +68,5 @@ client.on('guildMemberAdd', member => {
 })
 
 client.login(process.env.discordToken)
+
+net.createServer().listen(process.env.PORT || 3000)
