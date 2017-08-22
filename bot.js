@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 const fortniteGuildId = "348401698890317834"
 const _ = require('lodash')
+const http = require("http");
 
 const net = require('net')
 
@@ -70,3 +71,7 @@ client.on('guildMemberAdd', member => {
 client.login(process.env.discordToken)
 
 net.createServer().listen(process.env.PORT || 3000)
+
+setInterval(function() {
+    http.get('https://fortnite-ray.herokuapp.com/');
+}, 300000); // every 5 minutes (300000)
