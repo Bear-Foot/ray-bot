@@ -73,5 +73,5 @@ client.login(process.env.discordToken)
 net.createServer().listen(process.env.PORT || 3000)
 
 setInterval(function() {
-    http.get('https://fortnite-ray.herokuapp.com/');
+    http.get('http://fortnite-ray.herokuapp.com/');
 }, 300000); // every 5 minutes (300000)
